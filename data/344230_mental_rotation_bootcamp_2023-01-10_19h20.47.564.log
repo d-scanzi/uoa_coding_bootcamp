@@ -1,0 +1,14 @@
+1.2708 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+4.3013 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000231DB0EF040>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x00000231DC0DBF40>, multiSample=False, name='window1', numSamples=2, pos=(192, 108), screen=0, size=array([1536,  864]), stencilBits=0, stereo=False, units='deg', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+4.3014 	EXP 	window1: mouseVisible = True
+4.3014 	EXP 	window1: mouseVisible = True
+4.3014 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+4.3015 	EXP 	window1: recordFrameIntervals = False
+4.4674 	EXP 	window1: recordFrameIntervals = True
+4.6512 	EXP 	Screen (0) actual frame rate measured at 59.90Hz
+4.6512 	EXP 	window1: recordFrameIntervals = False
+4.6642 	WARNING 	launchHubServer: If using the iohub mouse or eyetracker devices, fullScr should be True.
+6.0226 	EXP 	Created target = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=3.0, italic=False, languageStyle='LTR', name='target', opacity=1.0, ori=0.0, pos=array([-8.,  0.]), rgb=UNKNOWN, text='R', units='deg', win=Window(...), wrapWidth=15.0)
+6.0335 	EXP 	target: autoDraw = True
+17.6354 	DATA 	Keypress: escape
+17.9302 	EXP 	window1: mouseVisible = True
