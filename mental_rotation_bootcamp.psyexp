@@ -12,7 +12,7 @@
     <Param val="True" valType="bool" updates="None" name="Full-screen window"/>
     <Param val="" valType="str" updates="None" name="HTML path"/>
     <Param val="" valType="str" updates="None" name="Incomplete URL"/>
-    <Param val="testMonitor" valType="str" updates="None" name="Monitor"/>
+    <Param val="desk_monitor" valType="str" updates="None" name="Monitor"/>
     <Param val="[]" valType="list" updates="None" name="Resources"/>
     <Param val="False" valType="bool" updates="None" name="Save csv file"/>
     <Param val="False" valType="bool" updates="None" name="Save excel file"/>
@@ -20,12 +20,12 @@
     <Param val="True" valType="bool" updates="None" name="Save log file"/>
     <Param val="True" valType="bool" updates="None" name="Save psydat file"/>
     <Param val="True" valType="bool" updates="None" name="Save wide csv file"/>
-    <Param val="1" valType="num" updates="None" name="Screen"/>
+    <Param val="2" valType="num" updates="None" name="Screen"/>
     <Param val="True" valType="bool" updates="None" name="Show info dlg"/>
     <Param val="False" valType="bool" updates="None" name="Show mouse"/>
     <Param val="deg" valType="str" updates="None" name="Units"/>
     <Param val="" valType="str" updates="None" name="Use version"/>
-    <Param val="[1536, 864]" valType="list" updates="None" name="Window size (pixels)"/>
+    <Param val="[1920, 1080]" valType="list" updates="None" name="Window size (pixels)"/>
     <Param val="avg" valType="str" updates="None" name="blendMode"/>
     <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
     <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
@@ -64,6 +64,23 @@
   </Settings>
   <Routines>
     <Routine name="trial">
+      <CodeComponent name="my_code">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="# How many seconds a trial should last?&amp;#10;trial_time = 6&amp;#10;&amp;#10;# What letters would you like to present?&amp;#10;possible_letters = [&quot;A&quot;, &quot;B&quot;, &quot;R&quot;, &quot;K&quot;]" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="trial_time = 6;&amp;#10;possible_letters = [&quot;A&quot;, &quot;B&quot;, &quot;R&quot;, &quot;K&quot;];&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="current_letter = np.random.choice(possible_letters, {&quot;size&quot;: 1});&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# Select what letter to run during the current trial&amp;#10;current_idx = np.random.choice(range(len(possible_letters)))&amp;#10;current_letter = possible_letters[current_idx]" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="my_code" valType="code" updates="None" name="name"/>
+      </CodeComponent>
       <TextComponent name="target">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -76,8 +93,105 @@
         <Param val="3" valType="num" updates="constant" name="letterHeight"/>
         <Param val="target" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
-        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="target_angle" valType="num" updates="set every repeat" name="ori"/>
         <Param val="(-15, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="trial_time" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$current_letter" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <TextComponent name="letter">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="$flip" valType="str" updates="set every repeat" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="3" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="letter" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="letter_angle" valType="num" updates="set every repeat" name="ori"/>
+        <Param val="(15, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="trial_time" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$current_letter" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <KeyboardComponent name="part_response">
+        <Param val="'a', 'l'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="$expected_key" valType="str" updates="constant" name="correctAns"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="part_response" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="trial_time" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="True" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+      <PolygonComponent name="fixation_cross">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="red" valType="color" updates="constant" name="fillColor"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="red" valType="color" updates="constant" name="lineColor"/>
+        <Param val="1" valType="num" updates="constant" name="lineWidth"/>
+        <Param val="4" valType="int" updates="constant" name="nVertices"/>
+        <Param val="fixation_cross" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="cross" valType="str" updates="None" name="shape"/>
+        <Param val="(1.5, 1.5)" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="trial_time" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="list" updates="constant" name="vertices"/>
+      </PolygonComponent>
+    </Routine>
+    <Routine name="instructions">
+      <TextComponent name="intro_slides">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="1.5" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="intro_slides" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -85,13 +199,56 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="R" valType="str" updates="constant" name="text"/>
+        <Param val="$intro_text" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
+      <KeyboardComponent name="change_slide">
+        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="change_slide" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
     </Routine>
   </Routines>
   <Flow>
+    <LoopInitiator loopType="TrialHandler" name="loop_intro">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('intro_text', 'Welcome to this experiment and thank you for deciding to participate!')]), OrderedDict([('intro_text', 'In this study you will see two letters presented one on the left and the other on the right side of the screen. Your job is to decide whether they are the same letters or not')]), OrderedDict([('intro_text', 'To do this you need to mentally rotate the letter on the left to try to match the one on the right. Sometimes the letters are a mirrored version of each other and they cannot be matched with a simple rotation')]), OrderedDict([('intro_text', 'If the letters match (are the same) press the A key. If they do not match (mirrored) press the L key.')])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="conditions/intro_slides.csv" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="name" updates="None" val="loop_intro" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="instructions"/>
+    <LoopTerminator name="loop_intro"/>
+    <LoopInitiator loopType="TrialHandler" name="loop_trials">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('condition', 'same'), ('target_angle', 0), ('letter_angle', 0), ('flip', 0.0)]), OrderedDict([('condition', 'same'), ('target_angle', 60), ('letter_angle', 0), ('flip', 0.0)]), OrderedDict([('condition', 'same'), ('target_angle', 120), ('letter_angle', 0), ('flip', 0.0)]), OrderedDict([('condition', 'same'), ('target_angle', 180), ('letter_angle', 0), ('flip', 0.0)]), OrderedDict([('condition', 'same'), ('target_angle', 240), ('letter_angle', 0), ('flip', 0.0)]), OrderedDict([('condition', 'same'), ('target_angle', 0), ('letter_angle', 60), ('flip', 0.0)]), OrderedDict([('condition', 'same'), ('target_angle', 60), ('letter_angle', 60), ('flip', 0.0)]), OrderedDict([('condition', 'same'), ('target_angle', 120), ('letter_angle', 60), ('flip', 0.0)]), OrderedDict([('condition', 'same'), ('target_angle', 180), ('letter_angle', 60), ('flip', 0.0)]), OrderedDict([('condition', 'same'), ('target_angle', 240), ('letter_angle', 60), ('flip', 0.0)]), OrderedDict([('condition', 'same'), ('target_angle', 0), ('letter_angle', 120), ('flip', 0.0)]), OrderedDict([('condition', 'same'), ('target_angle', 60), ('letter_angle', 120), ('flip', 0.0)]), OrderedDict([('condition', 'same'), ('target_angle', 120), ('letter_angle', 120), ('flip', 0.0)]), OrderedDict([('condition', 'same'), ('target_angle', 180), ('letter_angle', 120), ('flip', 0.0)]), OrderedDict([('condition', 'same'), ('target_angle', 240), ('letter_angle', 120), ('flip', 0.0)]), OrderedDict([('condition', 'same'), ('target_angle', 0), ('letter_angle', 180), ('flip', 0.0)]), OrderedDict([('condition', 'same'), ('target_angle', 60), ('letter_angle', 180), ('flip', 0.0)]), OrderedDict([('condition', 'same'), ('target_angle', 120), ('letter_angle', 180), ('flip', 0.0)]), OrderedDict([('condition', 'same'), ('target_angle', 180), ('letter_angle', 180), ('flip', 0.0)]), OrderedDict([('condition', 'same'), ('target_angle', 240), ('letter_angle', 180), ('flip', 0.0)]), OrderedDict([('condition', 'same'), ('target_angle', 0), ('letter_angle', 240), ('flip', 0.0)]), OrderedDict([('condition', 'same'), ('target_angle', 60), ('letter_angle', 240), ('flip', 0.0)]), OrderedDict([('condition', 'same'), ('target_angle', 120), ('letter_angle', 240), ('flip', 0.0)]), OrderedDict([('condition', 'same'), ('target_angle', 180), ('letter_angle', 240), ('flip', 0.0)]), OrderedDict([('condition', 'same'), ('target_angle', 240), ('letter_angle', 240), ('flip', 0.0)]), OrderedDict([('condition', 'mirrored'), ('target_angle', 0), ('letter_angle', 0), ('flip', 'horiz')]), OrderedDict([('condition', 'mirrored'), ('target_angle', 60), ('letter_angle', 0), ('flip', 'horiz')]), OrderedDict([('condition', 'mirrored'), ('target_angle', 120), ('letter_angle', 0), ('flip', 'horiz')]), OrderedDict([('condition', 'mirrored'), ('target_angle', 180), ('letter_angle', 0), ('flip', 'horiz')]), OrderedDict([('condition', 'mirrored'), ('target_angle', 240), ('letter_angle', 0), ('flip', 'horiz')]), OrderedDict([('condition', 'mirrored'), ('target_angle', 0), ('letter_angle', 60), ('flip', 'horiz')]), OrderedDict([('condition', 'mirrored'), ('target_angle', 60), ('letter_angle', 60), ('flip', 'horiz')]), OrderedDict([('condition', 'mirrored'), ('target_angle', 120), ('letter_angle', 60), ('flip', 'horiz')]), OrderedDict([('condition', 'mirrored'), ('target_angle', 180), ('letter_angle', 60), ('flip', 'horiz')]), OrderedDict([('condition', 'mirrored'), ('target_angle', 240), ('letter_angle', 60), ('flip', 'horiz')]), OrderedDict([('condition', 'mirrored'), ('target_angle', 0), ('letter_angle', 120), ('flip', 'horiz')]), OrderedDict([('condition', 'mirrored'), ('target_angle', 60), ('letter_angle', 120), ('flip', 'horiz')]), OrderedDict([('condition', 'mirrored'), ('target_angle', 120), ('letter_angle', 120), ('flip', 'horiz')]), OrderedDict([('condition', 'mirrored'), ('target_angle', 180), ('letter_angle', 120), ('flip', 'horiz')]), OrderedDict([('condition', 'mirrored'), ('target_angle', 240), ('letter_angle', 120), ('flip', 'horiz')]), OrderedDict([('condition', 'mirrored'), ('target_angle', 0), ('letter_angle', 180), ('flip', 'horiz')]), OrderedDict([('condition', 'mirrored'), ('target_angle', 60), ('letter_angle', 180), ('flip', 'horiz')]), OrderedDict([('condition', 'mirrored'), ('target_angle', 120), ('letter_angle', 180), ('flip', 'horiz')]), OrderedDict([('condition', 'mirrored'), ('target_angle', 180), ('letter_angle', 180), ('flip', 'horiz')]), OrderedDict([('condition', 'mirrored'), ('target_angle', 240), ('letter_angle', 180), ('flip', 'horiz')]), OrderedDict([('condition', 'mirrored'), ('target_angle', 0), ('letter_angle', 240), ('flip', 'horiz')]), OrderedDict([('condition', 'mirrored'), ('target_angle', 60), ('letter_angle', 240), ('flip', 'horiz')]), OrderedDict([('condition', 'mirrored'), ('target_angle', 120), ('letter_angle', 240), ('flip', 'horiz')]), OrderedDict([('condition', 'mirrored'), ('target_angle', 180), ('letter_angle', 240), ('flip', 'horiz')]), OrderedDict([('condition', 'mirrored'), ('target_angle', 240), ('letter_angle', 240), ('flip', 'horiz')])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="conditions/mental_rotation_conditions.csv" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="name" updates="None" val="loop_trials" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
     <Routine name="trial"/>
+    <LoopTerminator name="loop_trials"/>
   </Flow>
 </PsychoPy2experiment>
