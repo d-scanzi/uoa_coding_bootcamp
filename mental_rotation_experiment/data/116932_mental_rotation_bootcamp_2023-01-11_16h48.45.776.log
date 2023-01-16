@@ -1,0 +1,61 @@
+1.3329 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+3.4528 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001D29C978340>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001D29E83E790>, multiSample=False, name='window1', numSamples=2, pos=(0, 0), screen=1, size=array([1920, 1080]), stencilBits=0, stereo=False, units='deg', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+3.4529 	EXP 	window1: mouseVisible = True
+3.4529 	EXP 	window1: mouseVisible = False
+3.4529 	EXP 	window1: Attempting to measure frame rate of screen (1) ...
+3.4530 	EXP 	window1: recordFrameIntervals = False
+3.6192 	EXP 	window1: recordFrameIntervals = True
+3.8026 	EXP 	Screen (1) actual frame rate measured at 60.04Hz
+3.8026 	EXP 	window1: recordFrameIntervals = False
+4.6763 	EXP 	Created intro_slides = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=1.5, italic=False, languageStyle='LTR', name='intro_slides', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='deg', win=Window(...), wrapWidth=15.0)
+4.6775 	EXP 	Created target = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=3.0, italic=False, languageStyle='LTR', name='target', opacity=1.0, ori=1.0, pos=array([-15.,   0.]), rgb=UNKNOWN, text='', units='deg', win=Window(...), wrapWidth=15.0)
+4.7235 	EXP 	Created letter = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=3.0, italic=False, languageStyle='LTR', name='letter', opacity=1.0, ori=1.0, pos=array([15.,  0.]), rgb=UNKNOWN, text='R', units='deg', win=Window(...), wrapWidth=15.0)
+4.7248 	EXP 	Created fixation_cross = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, anchor=('center', 'center'), autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=-4.0, fillColor=array([ 1, -1, -1]), fillColorSpace='rgb', fillRGB=array([ 1, -1, -1]), interpolate=True, lineColor=array([ 1, -1, -1]), lineColorSpace='rgb', lineRGB=array([ 1, -1, -1]), lineWidth=1.0, name='fixation_cross', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1.5, 1.5]), units='deg', vertices=ndarray(...), win=Window(...), windingRule=None)
+4.7267 	EXP 	Imported conditions/intro_slides.csv as conditions, 4 conditions, 1 params
+4.7269 	EXP 	Created sequence: sequential, trialTypes=4, nReps=1, seed=None
+4.7271 	EXP 	New trial (rep=0, index=0): OrderedDict([('intro_text', 'Welcome to this experiment and thank you for deciding to participate!')])
+4.7538 	EXP 	intro_slides: height = 1.5
+4.7538 	EXP 	intro_slides: height = 1.5
+4.7538 	EXP 	intro_slides: height = 1.5
+4.7538 	EXP 	intro_slides: text = 'Welcome to this experiment and thank you for deciding to participate!'
+4.7538 	EXP 	intro_slides: autoDraw = True
+5.0378 	EXP 	New trial (rep=0, index=1): OrderedDict([('intro_text', 'In this study you will see two letters presented one on the left and the other on the right side of the screen. Your job is to decide whether they are the same letters or not')])
+5.0442 	DATA 	Keypress: space
+5.0538 	EXP 	intro_slides: autoDraw = False
+5.0538 	EXP 	intro_slides: height = 1.5
+5.0538 	EXP 	intro_slides: height = 1.5
+5.0538 	EXP 	intro_slides: height = 1.5
+5.0538 	EXP 	intro_slides: text = 'In this study you will see two letters presented one on the left and the other on the right side of the screen. Your job is to decide whether they are the same letters or not'
+5.0538 	EXP 	intro_slides: autoDraw = True
+5.1547 	DATA 	Keypress: space
+5.1709 	EXP 	New trial (rep=0, index=2): OrderedDict([('intro_text', 'To do this you need to mentally rotate the letter on the left to try to match the one on the right. Sometimes the letters are a mirrored version of each other and they cannot be matched with a simple rotation')])
+5.1872 	EXP 	intro_slides: autoDraw = False
+5.1872 	EXP 	intro_slides: height = 1.5
+5.1872 	EXP 	intro_slides: height = 1.5
+5.1872 	EXP 	intro_slides: height = 1.5
+5.1872 	EXP 	intro_slides: text = 'To do this you need to mentally rotate the letter on the left to try to match the one on the right. Sometimes the letters are a mirrored version of each other and they cannot be matched with a simple rotation'
+5.1872 	EXP 	intro_slides: autoDraw = True
+5.3044 	EXP 	New trial (rep=0, index=3): OrderedDict([('intro_text', 'If the letters match (are the same) press the A key. If they do not match (mirrored) press the L key.')])
+5.3083 	DATA 	Keypress: space
+5.3205 	EXP 	intro_slides: autoDraw = False
+5.3205 	EXP 	intro_slides: height = 1.5
+5.3205 	EXP 	intro_slides: height = 1.5
+5.3205 	EXP 	intro_slides: height = 1.5
+5.3205 	EXP 	intro_slides: text = 'If the letters match (are the same) press the A key. If they do not match (mirrored) press the L key.'
+5.3205 	EXP 	intro_slides: autoDraw = True
+5.6589 	EXP 	Imported conditions/mental_rotation_conditions.csv as conditions, 50 conditions, 5 params
+5.6592 	EXP 	Created sequence: random, trialTypes=50, nReps=1, seed=None
+5.6593 	EXP 	New trial (rep=0, index=0): OrderedDict([('condition', 'same'), ('target_angle', 60), ('letter_angle', 60), ('flip', 0.0), ('expected_key', 'a')])
+5.6631 	DATA 	Keypress: space
+5.6705 	EXP 	intro_slides: autoDraw = False
+5.6705 	EXP 	target: ori = 60.0
+5.6705 	EXP 	target: height = 3.0
+5.6705 	EXP 	target: height = 3.0
+5.6705 	EXP 	target: height = 3.0
+5.6705 	EXP 	target: text = array(['K'], dtype='<U1')
+5.6705 	EXP 	letter: ori = 60.0
+5.6705 	EXP 	target: autoDraw = True
+5.6705 	EXP 	letter: autoDraw = True
+5.6705 	EXP 	fixation_cross: autoDraw = True
+7.1214 	DATA 	Keypress: escape
+7.6259 	EXP 	window1: mouseVisible = True

@@ -1,0 +1,16 @@
+2.2402 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+5.3828 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000208C3DD8310>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x00000208C5CB0730>, multiSample=False, name='window1', numSamples=2, pos=(0, 0), screen=1, size=array([1920, 1080]), stencilBits=0, stereo=False, units='deg', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+5.3829 	EXP 	window1: mouseVisible = True
+5.3830 	EXP 	window1: mouseVisible = False
+5.3830 	EXP 	window1: Attempting to measure frame rate of screen (1) ...
+5.3830 	EXP 	window1: recordFrameIntervals = False
+5.5492 	EXP 	window1: recordFrameIntervals = True
+5.8033 	WARNING 	t of last frame was 20.12ms (=1/49)
+5.9833 	EXP 	Screen (1) actual frame rate measured at 59.91Hz
+5.9833 	EXP 	window1: recordFrameIntervals = False
+6.9869 	EXP 	Created target = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=3.0, italic=False, languageStyle='LTR', name='target', opacity=1.0, ori=0.0, pos=array([-15.,   0.]), rgb=UNKNOWN, text='R', units='deg', win=Window(...), wrapWidth=15.0)
+6.9882 	EXP 	Created letter = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=3.0, italic=False, languageStyle='LTR', name='letter', opacity=1.0, ori=0.0, pos=array([15.,  0.]), rgb=UNKNOWN, text='R', units='deg', win=Window(...), wrapWidth=15.0)
+7.0003 	EXP 	target: autoDraw = True
+7.0003 	EXP 	letter: autoDraw = True
+25.7850 	DATA 	Keypress: escape
+26.4392 	EXP 	window1: mouseVisible = True

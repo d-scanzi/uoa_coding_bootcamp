@@ -1,0 +1,18 @@
+1.2496 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+4.3239 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001F34D68D0A0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001F34E5FE070>, multiSample=False, name='window1', numSamples=2, pos=(192, 108), screen=0, size=array([1536,  864]), stencilBits=0, stereo=False, units='deg', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+4.3240 	EXP 	window1: mouseVisible = True
+4.3240 	EXP 	window1: mouseVisible = True
+4.3240 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+4.3241 	EXP 	window1: recordFrameIntervals = False
+4.4899 	EXP 	window1: recordFrameIntervals = True
+4.6734 	EXP 	Screen (0) actual frame rate measured at 60.13Hz
+4.6735 	EXP 	window1: recordFrameIntervals = False
+4.6895 	WARNING 	launchHubServer: If using the iohub mouse or eyetracker devices, fullScr should be True.
+6.0321 	EXP 	Created target = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1, 1, 1]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='target', opacity=1.0, ori=0.0, pos=array([-8.,  0.]), rgb=UNKNOWN, text='R', units='deg', win=Window(...), wrapWidth=15.0)
+6.0388 	EXP 	target: autoDraw = True
+8.4242 	DATA 	Mouse: Left button down, pos=(1453,828)
+8.5574 	DATA 	Mouse:  Left button up, pos=(1453,828)
+8.5575 	DATA 	Mouse: Left button down, pos=(1453,828)
+8.7909 	DATA 	Mouse:  Left button up, pos=(1453,828)
+8.8912 	DATA 	Keypress: escape
+9.4173 	EXP 	window1: mouseVisible = True
