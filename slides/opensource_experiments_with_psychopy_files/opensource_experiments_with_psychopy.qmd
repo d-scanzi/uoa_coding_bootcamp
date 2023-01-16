@@ -1,0 +1,194 @@
+---
+title: "Opensource experiments with Psychopy"
+author: "Daniele Scanzi"
+format: revealjs
+editor: visual
+---
+
+## About the day
+
+*Intro*
+
+|    1. What is [Psychopy](https://www.psychopy.org/)?
+|    2. Why do we use it (and you should too)?
+|    3. Possible alternatives
+
+*Core*
+
+|    1. Create a [mental rotation task](https://en.wikipedia.org//wiki/Mental_rotation) with the GUI
+|    2. Adding code
+|    3. Basics of Python coding
+
+## About us
+
+::: columns
+
+::: {.column width="50%"}
+Daniele Scanzi
+:::
+
+::: {.column width="50%"}
+Dylan Taylor
+:::
+:::
+
+## What is Psychopy
+
+:::: columns
+
+::: {.column width="30%"}
+![](images/psychopy_logo.png)
+:::
+
+::: {.column width="70%"}
+Psychopy is a software based on Python which allows you to create experiments. It is used primarily in ***psychology*** and ***neuroscience***. 
+It currently counts almost 40.000 unique users. 
+:::
+
+::::
+
+## Why Psychopy?
+
+::: columns
+
+::: {.column width="30%"}
+![](images/psychopy_logo.png)
+:::
+
+::: {.column width="70%"}
+|    1. Easy to use (GUI)
+|    2. Flexible (code)
+|    3. Precise
+|    4. Openscience
+|    5. Lab-based + Online experiments
+:::
+
+::::
+
+## Alternatives
+
+There are other commonly used experimental software out there, some of which might be used by people in your lab. Here is a breakdown of the most commonly used in our offices and how they features. Note, this is necessarily a biased list.
+
+:::: columns
+
+::: {.column width="15%"}
+:::
+
+::: {.column width="30%"}
+***PSYCHTOOLBOX***
+Opensource
+Matlab based
+No GUI
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="30%"}
+***EPRIME***
+Proprietary ($)
+Mainly GUI
+widely used
+:::
+
+::: {.column width="15%"}
+:::
+
+
+::::
+
+# Mental Rotation Task
+
+:::: columns
+
+::: {.column width="60%"}
+![](images/shepard_metzler_stim.png)
+:::
+
+::: {.column width="40%"}
+Originally developed by [Shepard and Metzler (1971)](https://www.science.org/doi/abs/10.1126/science.171.3972.701), it is still today one of the most commonly used task to investigate the cognitive manipulation of mental images.
+:::
+
+::::
+
+## Mental Rotation Task
+
+:::: columns
+
+::: {.column width="60%"}
+![](images/shepard_metzler_stim.png)
+:::
+
+::: {.column width="40%"}
+Are the two objects the same?
+:::
+
+::::
+
+## Mental Rotation Task
+
+:::: columns
+
+::: {.column width="50%"}
+![](images/shepard_metzler_stim.png)
+Same object
+:::
+
+::: {.column width="50%"}
+![](images/shepard_metzler_stim_diff.png)
+Different Objects (mirrored)
+:::
+
+::::
+
+## Mental Rotation Task
+
+:::: columns
+
+::: {.column width="60%"}
+![](images/shepard_metzler_results.png)
+:::
+
+::: {.column width="40%"}
+Reaction times increase linearly with the increase in the rotation angle of the two objects
+:::
+
+::::
+
+
+## What we will create today
+
+:::: columns
+
+::: {.column width="50%"}
+![](images/experiment_example.png)
+
+:::
+
+::: {.column width="50%"}
+We will create a 2D version of the original task, with letters as stimuli. We will manipulate
+
+<ul>
+  <li>Rotation angle</li>
+  <li>Letter equality</li>
+</ul>
+:::
+
+::::
+
+# Let's start with Psychopy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
